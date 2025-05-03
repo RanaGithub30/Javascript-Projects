@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock App</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Clock App</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" id="analogLink" href="#" onclick="showClock('analog')">Analog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" id="digitalLink" onclick="showClock('digital')">Digital</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" id="timerLink" onclick="showClock('timer')">Timer</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" id="stopwatchLink" onclick="showClock('stopwatch')">Stopwatch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container text-center mt-5">
+    <div class="clock analog-clock" id="analogClock">
+        <div class="hand hour" id="hourHand"></div>
+        <div class="hand minute" id="minuteHand"></div>
+        <div class="hand second" id="secondHand"></div>
+        <div class="center"></div>
+      
+        <!-- Numbers will be injected here -->
+        <div id="clockNumbers"></div>
+    </div>
+
+    <div id="digitalClock" class="digital-clock" style="display: none;">00:00:00</div>
+
+    <div id="timer" class="row timer-container">
+      
+      <div class="container mt-4">
+        <div class="row justify-content-center">
+          <!-- Timer 1 -->
+          <div class="col-sm-4">
+            <div class="timer-card" id="timer1">
+              <div class="timer-label">5 min</div>
+              <div class="timer-ring">
+                <svg viewBox="0 0 100 100">
+                  <circle class="bg" cx="50" cy="50" r="45" />
+                  <circle class="progress" cx="50" cy="50" r="45" />
+                </svg>
+                <div class="timer-display">00:05:00</div>
+              </div>
+              <div class="timer-controls">
+                <button onclick="timers['timer1'].start()">▶️</button>
+                <button onclick="timers['timer1'].reset()">↻</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Timer 2 -->
+          <div class="col-sm-4">
+            <div class="timer-card" id="timer2">
+              <div class="timer-label">10 min</div>
+              <div class="timer-ring">
+                <svg viewBox="0 0 100 100">
+                  <circle class="bg" cx="50" cy="50" r="45" />
+                  <circle class="progress" cx="50" cy="50" r="45" />
+                </svg>
+                <div class="timer-display">00:10:00</div>
+              </div>
+              <div class="timer-controls">
+                <button onclick="timers['timer2'].start()">▶️</button>
+                <button onclick="timers['timer2'].reset()">↻</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <div id="stopwatch" class="stopwatch text-center" style="display: none;">
+      <div id="stopwatchDisplay" class="mb-3" style="font-size: 2rem;">00:00:00</div>
+      <div class="btn-group" role="group" aria-label="Stopwatch Controls">
+        <button class="btn btn-success" id="startStopwatch" onclick="startStopwatch()">Start</button>
+        <button class="btn btn-warning" id="stopStopWatch" onclick="stopStopWatch()">Pause</button>
+        <button class="btn btn-danger" id="resetBtn" onclick="resetStopwatch()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="clock.js"></script>
+  <!-- <script src="timer.js"></script> -->
+</body>
+</html>

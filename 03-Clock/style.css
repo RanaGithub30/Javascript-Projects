@@ -1,0 +1,187 @@
+body {
+  background: #f2f2f2;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.analog-clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  border: 12px solid #333;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  background: #333;
+  border-radius: 6px;
+}
+
+.hour {
+  height: 60px;
+  width: 6px;
+  z-index: 3;
+  background: #000;
+}
+.minute {
+  height: 90px;
+  width: 4px;
+  z-index: 2;
+  background: #007bff;
+}
+.second {
+  height: 100px;
+  width: 2px;
+  z-index: 1;
+  background: red;
+}
+
+.number {
+  position: absolute;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  transform: translate(-50%, -50%);
+}
+
+.number[data-number="1"] {
+  top: 15%;
+  left: 73%;
+}
+.number[data-number="2"] {
+  top: 28%;
+  left: 85%;
+}
+.number[data-number="3"] {
+  top: 50%;
+  left: 90%;
+}
+.number[data-number="4"] {
+  top: 72%;
+  left: 85%;
+}
+.number[data-number="5"] {
+  top: 85%;
+  left: 73%;
+}
+.number[data-number="6"] {
+  top: 90%;
+  left: 50%;
+}
+.number[data-number="7"] {
+  top: 85%;
+  left: 27%;
+}
+.number[data-number="8"] {
+  top: 72%;
+  left: 15%;
+}
+.number[data-number="9"] {
+  top: 50%;
+  left: 10%;
+}
+.number[data-number="10"] {
+  top: 28%;
+  left: 15%;
+}
+.number[data-number="11"] {
+  top: 15%;
+  left: 27%;
+}
+.number[data-number="12"] {
+  top: 10%;
+  left: 50%;
+}
+
+.digital-clock,
+.timer,
+.stopwatch {
+  font-size: 48px;
+  margin-top: 30px;
+}
+
+button {
+  margin: 10px 5px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary */
+}
+
+
+/** Timer **/
+.timer-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.timer-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 12px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 10;
+}
+
+.progress {
+  fill: none;
+  stroke: #007bff;
+  stroke-width: 10;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

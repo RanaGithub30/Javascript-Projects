@@ -20,3 +20,11 @@
 - Equal `=` button  
 - Clear `C` button  
 - Display input and result
+
+## 3. Clock App
+
+### Features:
+- Analog Clock
+- Digital Clock
+- Countdown Timer
+- Stopwatch
