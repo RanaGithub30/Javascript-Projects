@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+      <h2 class="text-center mb-3">Quiz App</h2>
+
+      <div id="select_topic" class="row">
+        <label for="topics" class="col-12 text-center h4">Select A Quiz Topic</label>
+        <select name="topics" id="topics" class="col-12 form-control" required>
+          <option value="">Select A Topic</option>
+          <option value="html">HTML, CSS, JavaSCript</option>
+          <option value="php">PHP, Laravel</option>
+          <option value="node">Node.js</option>
+          <option value="sql">SQL</option>
+        </select>
+
+        <button id="topic_submit" class="col-12 mt-3 btn btn-primary">Next</button>
+      </div>
+
+      <div id="quiz" class="row mt-5" style="display: none;">
+        <!-- <div class="col-12 text-right">
+          <p id="timer" class="text-danger font-weight-bold">Time Left: <span id="time_left">15</span> seconds</p>
+        </div> -->
+
+        <div class="row">
+          <div class="col-12">
+            <h2 id="question">Question No - <p id="question_no">#</p></h2>
+          </div>
+          <div class="col-12 text-right">
+            <p id="current_ques">1/10</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <h4 id="question_text">Question Here</h4>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input type="radio" id="option1" name="answer" class="form-check-input" />
+            <label class="form-check-label" for="option1">Option 1</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="option2" name="answer" class="form-check-input" />
+            <label class="form-check-label" for="option2">Option 2</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="option3" name="answer" class="form-check-input" />
+            <label class="form-check-label" for="option3">Option 3</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="option4" name="answer" class="form-check-input" />
+            <label class="form-check-label" for="option4">Option 4</label>
+          </div>
+        </div>
+        <div class="col-12 mt-3">
+          <button id="previous" class="btn btn-dark" disabled>Previous &lt;&lt;</button>
+          <button id="skip" class="btn btn-dark">Skip &gt;&gt;</button>
+          <button id="cancel" class="btn btn-danger">Cancel</button>
+          <button id="save_next" class="btn btn-primary">Save & Next</button>
+          <button id="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+
+      <div id="marks_div" class="row mt-5" style="display: none;">
+        <h2>Result</h2>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="quiz.js"></script>
+  </body>
+</html>
