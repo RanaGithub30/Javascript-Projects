@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wikipedia Search Tool</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Wikipedia Search & Random Explorer</h1>
+    </header>
+
+    <form id="searchForm" class="search-form">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search Wikipedia articles..." required />
+      <button type="submit" class="btn btn-primary">🔍 Search</button>
+      <button type="button" class="btn btn-default" onclick="resetSearch()">Reset</button>
+
+      <button type="button" class="btn btn-warning" onclick="window.open('https://en.wikipedia.org/wiki/Special:Random')">🎲 Random Article</button>
+    </form>
+
+    <div id="resultsList"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

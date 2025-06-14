@@ -53,3 +53,16 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     🔁 **Real-time conversion** on input change
     🛑 **Validation for numeric input only**
     🧼 **Auto-clear output** for empty or invalid input
+
+📚 6. Wikipedia Search & Random Article Explorer
+
+    ✨ Features:
+
+    🔍 Search any Wikipedia article instantly by keyword
+    🎲 Explore random articles with a single click
+    📑 View live search results with title and snippet previews
+    🧭 Clickable links to full articles on Wikipedia
+    📱 Responsive layout for mobile and desktop
+    🎨 Styled UI using Bootstrap and custom CSS
+    ⚙️ Built using Vanilla JavaScript, Fetch API, and Wikipedia's public API
+    🧼 Reset button to quickly clear input and results
