@@ -46,7 +46,8 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
 
 🌡️ 5. Temperature Converter
 
- ✨ Features:
+    ✨ Features:
+    
     🌡️ **Convert between Celsius and Fahrenheit**
     🔽 **Dropdown menu** to switch conversion direction
     🔁 **Real-time conversion** on input change
