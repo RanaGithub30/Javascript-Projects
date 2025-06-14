@@ -43,3 +43,12 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     📤 Submit Quiz and display results
     🥳 Confetti effect on passing with 60% or more
     😞 Friendly retry message if not passed
+
+🌡️ 5. Temperature Converter
+
+ ✨ Features:
+    🌡️ **Convert between Celsius and Fahrenheit**
+    🔽 **Dropdown menu** to switch conversion direction
+    🔁 **Real-time conversion** on input change
+    🛑 **Validation for numeric input only**
+    🧼 **Auto-clear output** for empty or invalid input
