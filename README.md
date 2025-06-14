@@ -3,6 +3,7 @@
 A collection of beginner-to-intermediate JavaScript projects to practice DOM manipulation, event handling, and basic logic building.
 
 ✅ 1. Todo List Project
+    🎯 Difficulty: Beginner
 
     ✨ Features:
 
@@ -12,6 +13,7 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     ⚠️ Input validation to prevent empty tasks
 
 🧮 2. Calculator Project
+    🎯 Difficulty: Beginner
 
     ✨ Features:
 
@@ -22,7 +24,8 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     🖥️ Display input and result
 
 🕒 3. Clock App
-
+    🎯 Difficulty: Beginner to Intermediate
+    
     ✨ Features:
 
     🕰️ Analog Clock (visually styled clock face)
@@ -31,6 +34,7 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     ⏱️ Stopwatch with start, stop, and reset options
 
 📝 4. Quiz App
+    🎯 Difficulty: Intermediate
 
     ✨ Features:
 
@@ -45,6 +49,7 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     😞 Friendly retry message if not passed
 
 🌡️ 5. Temperature Converter
+    🎯 Difficulty: Beginner
 
     ✨ Features:
     
@@ -55,6 +60,7 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     🧼 **Auto-clear output** for empty or invalid input
 
 📚 6. Wikipedia Search & Random Article Explorer
+    🎯 Difficulty: Intermediate
 
     ✨ Features:
 
