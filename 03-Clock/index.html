@@ -9,16 +9,25 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Clock App</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link active" id="analogLink" href="#" onclick="showClock('analog')">Analog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" id="digitalLink" onclick="showClock('digital')">Digital</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" id="timerLink" onclick="showClock('timer')">Timer</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" id="stopwatchLink" onclick="showClock('stopwatch')">Stopwatch</a></li>
-      </ul>
-    </div>
-  </nav>
+  <a class="navbar-brand" href="#">Clock App</a>
+  
+  <!-- Toggler button for small screens -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible nav items -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link active" id="analogLink" href="#" onclick="showClock('analog')">Analog</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" id="digitalLink" onclick="showClock('digital')">Digital</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" id="timerLink" onclick="showClock('timer')">Timer</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" id="stopwatchLink" onclick="showClock('stopwatch')">Stopwatch</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <div class="container text-center mt-5">
     <div class="clock analog-clock" id="analogClock">
@@ -90,6 +99,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="clock.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- <script src="timer.js"></script> -->
 </body>
 </html>

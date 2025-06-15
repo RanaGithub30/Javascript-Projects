@@ -1,12 +1,24 @@
+/* General */
 body {
   background: #f2f2f2;
   font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar */
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary */
+}
+
+/* Analog Clock */
 .analog-clock {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 90vw;
+  max-width: 300px;
+  height: 90vw;
+  max-height: 300px;
   margin: 30px auto;
   border: 12px solid #333;
   border-radius: 50%;
@@ -42,12 +54,14 @@ body {
   z-index: 3;
   background: #000;
 }
+
 .minute {
   height: 90px;
   width: 4px;
   z-index: 2;
   background: #007bff;
 }
+
 .second {
   height: 100px;
   width: 2px;
@@ -63,78 +77,36 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.number[data-number="1"] {
-  top: 15%;
-  left: 73%;
-}
-.number[data-number="2"] {
-  top: 28%;
-  left: 85%;
-}
-.number[data-number="3"] {
-  top: 50%;
-  left: 90%;
-}
-.number[data-number="4"] {
-  top: 72%;
-  left: 85%;
-}
-.number[data-number="5"] {
-  top: 85%;
-  left: 73%;
-}
-.number[data-number="6"] {
-  top: 90%;
-  left: 50%;
-}
-.number[data-number="7"] {
-  top: 85%;
-  left: 27%;
-}
-.number[data-number="8"] {
-  top: 72%;
-  left: 15%;
-}
-.number[data-number="9"] {
-  top: 50%;
-  left: 10%;
-}
-.number[data-number="10"] {
-  top: 28%;
-  left: 15%;
-}
-.number[data-number="11"] {
-  top: 15%;
-  left: 27%;
-}
-.number[data-number="12"] {
-  top: 10%;
-  left: 50%;
-}
+.number[data-number="1"] { top: 15%; left: 73%; }
+.number[data-number="2"] { top: 28%; left: 85%; }
+.number[data-number="3"] { top: 50%; left: 90%; }
+.number[data-number="4"] { top: 72%; left: 85%; }
+.number[data-number="5"] { top: 85%; left: 73%; }
+.number[data-number="6"] { top: 90%; left: 50%; }
+.number[data-number="7"] { top: 85%; left: 27%; }
+.number[data-number="8"] { top: 72%; left: 15%; }
+.number[data-number="9"] { top: 50%; left: 10%; }
+.number[data-number="10"] { top: 28%; left: 15%; }
+.number[data-number="11"] { top: 15%; left: 27%; }
+.number[data-number="12"] { top: 10%; left: 50%; }
 
+/* Digital Clock / Timer / Stopwatch Containers */
 .digital-clock,
 .timer,
 .stopwatch {
   font-size: 48px;
   margin-top: 30px;
+  text-align: center;
 }
 
-button {
-  margin: 10px 5px;
+/* Timer Section */
+.timer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.nav-link.active {
-  font-weight: bold;
-  color: #007bff; /* Bootstrap primary */
-}
-
-
-/** Timer **/
 .timer-card {
   background: #fff;
   border-radius: 12px;
@@ -142,6 +114,8 @@ button:disabled {
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
 }
 
 .timer-ring {
@@ -184,4 +158,77 @@ svg {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+/* Stopwatch Buttons */
+.stopwatch .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stopwatch .btn-group .btn {
+  margin: 5px;
+}
+
+/* Buttons */
+button {
+  margin: 10px 5px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .digital-clock,
+  .stopwatch #stopwatchDisplay {
+    font-size: 1.8rem;
+  }
+
+  .number {
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .timer-card {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-clock,
+  .stopwatch #stopwatchDisplay {
+    font-size: 1.5rem;
+  }
+
+  .timer-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timer-display {
+    font-size: 0.9rem;
+  }
+
+  .hand.hour {
+    height: 40px;
+  }
+
+  .hand.minute {
+    height: 60px;
+  }
+
+  .hand.second {
+    height: 70px;
+  }
 }
