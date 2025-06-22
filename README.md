@@ -89,3 +89,20 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     ❓ Help link and 🧾 About modal with app info
     🎹 Optional support for keyboard shortcuts (Ctrl+S, Ctrl+N, etc.)
     🎨 Styled using Bootstrap and Font Awesome
+
+🌀 8. Weather App
+    🎯 Difficulty: Beginner–Intermediate
+
+    ✨ Features:
+
+    🌆 Search current weather by city name
+    🌡️ Display temperature in Celsius
+    🌤️ Show weather description (e.g., "light rain", "clear sky")
+    💧 Display humidity and wind speed
+    🌈 Dynamic weather icon based on conditions (e.g., ☀️, 🌧️) using Font Awesome
+    🔄 Reset button to clear input and restore default UI
+    🕔 Optional: Add 5-day forecast using OpenWeather's Forecast API
+    🖼️ Optional: Background/image change based on weather
+    🧾 Clean UI styled with Bootstrap 4 and Font Awesome 6
+    🔧 Powered by the OpenWeather API
+    📱 Fully responsive — works on desktop and mobile

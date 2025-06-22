@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container text-center">
+    <h1 class="mb-4">🌤️ Weather App</h1>
+
+    <!-- Search Form -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <form id="weatherForm">
+          <div class="input-group">
+            <input type="text" class="form-control" id="cityInput" placeholder="Enter city name" required>
+            <div class="input-group-append">
+              <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+              <button class="btn btn-danger ml-2" type="button" id="resetBtn" disabled><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Weather Card -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="weather-card text-center">
+          <div class="icon mb-3"><i id="weatherIcon" class="fas fa-cloud-sun"></i></div>
+          <h2 id="cityName">City Name</h2>
+          <div class="temp" id="temperature">25°C</div>
+          <p id="description">Partly cloudy</p>
+          <p><i class="fas fa-tint"></i> Humidity: <span id="humidity">65%</span></p>
+          <p><i class="fas fa-wind"></i> Wind: <span id="wind">10 km/h</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast Section -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-10">
+        <h4>5-Day Forecast</h4>
+        <div id="forecast" class="d-flex justify-content-between flex-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
