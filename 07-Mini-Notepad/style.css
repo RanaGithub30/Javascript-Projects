@@ -1,0 +1,38 @@
+/* Reset and Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Textarea full screen minus navbar */
+.notepad-textarea {
+  position: fixed;
+  top: 50px; /* Navbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding: 20px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* Placeholder styling */
+.notepad-textarea::placeholder {
+  color: #d9534f;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Navbar theme */
+.navbar {
+  background-color: #d9edf7;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

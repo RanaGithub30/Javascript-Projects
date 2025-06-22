@@ -72,3 +72,20 @@ A collection of beginner-to-intermediate JavaScript projects to practice DOM man
     🎨 Styled UI using Bootstrap and custom CSS
     ⚙️ Built using Vanilla JavaScript, Fetch API, and Wikipedia's public API
     🧼 Reset button to quickly clear input and results
+
+📝 7. Mini Notepad
+    🎯 Difficulty: Intermediate
+
+    ✨ Features:
+
+    📄 Create a new file (clear editor content)
+    📂 Open .txt files from your computer
+    💾 Download content as .txt file
+    🖨️ Print using browser's print dialog
+    ✂️ Cut, copy, paste, delete, select all — via buttons or keyboard
+    ⌚ Insert current time/date at cursor position
+    🔠 Toggle word wrap on/off
+    🔤 Change font via user input
+    ❓ Help link and 🧾 About modal with app info
+    🎹 Optional support for keyboard shortcuts (Ctrl+S, Ctrl+N, etc.)
+    🎨 Styled using Bootstrap and Font Awesome
